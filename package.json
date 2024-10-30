@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@ethersproject/shims": "^5.7.0",
+    "@pancakeswap/sdk": "^5.8.8",
+    "@pancakeswap/v3-core": "^1.0.2",
+    "@pancakeswap/v3-periphery": "^1.0.2",
+    "@pancakeswap/v3-sdk": "^3.8.11",
+    "@types/node": "^22.7.5",
+    "@uniswap/sdk-core": "^5.8.1",
+    "@uniswap/v3-sdk": "^3.17.1",
+    "axios": "^1.7.7",
+    "ethers": "5",
+    "hardhat": "^2.22.14",
+    "openai": "^4.68.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}

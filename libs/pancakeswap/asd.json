@@ -1,0 +1,159 @@
+{
+  "USDT/BTCB-0.01_pancake": 66599.804681051,
+  "USDT/BTCB-0.05_uniswap": 66592.99583126443,
+  "USDT/BTCB-0.01_uniswap": 66571.92389788177
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66523.06856562142,
+  "USDT/BTCB-0.05_uniswap": 66545.86103097678,
+  "USDT/BTCB-0.01_uniswap": 66539.15038878731
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66536.95026879448,
+  "USDT/BTCB-0.05_uniswap": 66525.22724894327,
+  "USDT/BTCB-0.01_uniswap": 66522.65458707853
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66462.29744185784,
+  "USDT/BTCB-0.05_uniswap": 66481.95585797231,
+  "USDT/BTCB-0.01_uniswap": 66486.71685490107
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66470.24316033517,
+  "USDT/BTCB-0.05_uniswap": 66482.16098258276,
+  "USDT/BTCB-0.01_uniswap": 66480.90176643916
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66483.96208900982,
+  "USDT/BTCB-0.05_uniswap": 66482.16098258276,
+  "USDT/BTCB-0.01_uniswap": 66480.90176643916
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66453.47342405858,
+  "USDT/BTCB-0.05_uniswap": 66482.16098258276,
+  "USDT/BTCB-0.01_uniswap": 66480.90176643916
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66444.01563914855,
+  "USDT/BTCB-0.05_uniswap": 66474.47971921129,
+  "USDT/BTCB-0.01_uniswap": 66456.6123030899
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 66445.82967860698,
+  "USDT/BTCB-0.05_uniswap": 66433.18607592343,
+  "USDT/BTCB-0.01_uniswap": 66439.72507917091
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 67741.10176871339,
+  "USDT/BTCB-0.05_uniswap": 67741.99953882898,
+  "USDT/BTCB-0.01_uniswap": 67740.31058313596
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 67448.92752883585,
+  "USDT/BTCB-0.05_uniswap": 67449.54135994002,
+  "USDT/BTCB-0.01_uniswap": 67485.7655376255
+}
+
+{
+  "USDT/BTCB-0.01_pancake": 67413.02724717293,
+  "USDT/BTCB-0.05_uniswap": 67397.24059290123,
+  "USDT/BTCB-0.01_uniswap": 67394.39289562493
+}
+
+Determine the best possible gain from a given set of cryptocurrency exchange data while considering potential price variations due to the time taken for multiple swaps.
+
+The provided data consists of pairs of possible exchanges of crypto assets with their respective prices in the format: 'token1/token2-platformfee_platform: price'. Your goal is to calculate the maximum gain achievable through the potential series of exchanges. Keep in mind the dynamic nature of blockchain prices, which can change every second, potentially introducing variations and losses if too many swaps are involved.
+
+# Steps
+
+1. **Identify Exchange Pairs**: Analyze the provided exchange data to identify all possible exchange pairs and their associated prices.
+2. **Evaluate Paths**: Calculate possible exchange paths that might yield a gain, including the number of swaps involved.
+3. **Consider Volatility**: Take into account price volatility over time, especially if multiple exchanges are needed, and adjust calculations to mitigate potential losses.
+4. **Determine Best Path**: Select the path that results in the highest gain after considering factors such as path length and price changes.
+
+# Output Format
+
+Provide a detailed explanation of the chosen exchange path, including the sequence of exchanges and the final gain. Use prose to describe the steps and results clearly.
+
+# Examples
+
+**Example Input**:
+```
+BTC/ETH-0.1_platform1: 0.029, ETH/USD-0.05_platform2: 2100, ...
+```
+**Example Output**:
+```
+The best gain can be achieved by converting BTC to ETH on platform1, and then ETH to USD on platform2. The expected gain is XYZ units after considering a potential decline in ETH/USD price due to the time taken for exchange.
+(Note: Real examples should be fully fleshed out with all steps and calculations explicitly shown.)
+```
+
+# Notes
+
+- Consider edge cases where only a single swap may yield the best result due to high volatility.
+- Ensure that the overall number of swaps remains reasonable to minimize potential losses due to price variations.
+
+
+--------------------------
+
+Determine the optimal sequence of cryptocurrency exchanges to maximize gains, given specific exchange data and constraints.
+
+You are provided with exchange pairs and their respective prices in the format: 'token1/token2-platformfee_platform': price. Your goal is to find the best potential gain from these pairs given a starting amount of 1500 USDC. Consider that prices fluctuate frequently, impacting the results of multiple swaps.
+
+Key Details:
+- Platforms: Only Uniswap and Pancakeswap are available.
+- Starting amount: 1500 USDC.
+- Data format: 'token1/token2-platformfee_platform': price.
+  - 'token1/token2' specifies the tokens.
+  - 'platformfee' is the transaction fee on the platform.
+  - 'price' is the amount of token2 you can receive per 1 token1.
+- Swap direction can be reversed within the same platform, preserving the price and fee.
+- The number of swaps should be optimized, considering potential price volatility with more swaps, which might lead to losses.
+
+# Steps
+
+1. Analyze all available pairs and their respective prices.
+2. Calculate potential outcomes for each swap considering platform fees.
+3. Consider reverse swaps and their potential benefits.
+4. Determine the sequence of swaps that results in the highest percent gain.
+5. Be cautious with multiple swaps due to possible price fluctuations.
+6. Calculate and validate final USDC after completing the swaps.
+
+# Output Format
+
+The output must be a JavaScript object as follows:
+- An array of strings representing the steps of the swap process: [step1, step2, ..., stepN
+]
+- A numeric value representing the percent gain.
+- A numeric value representing the final amount in USDC.
+
+Example output: `{
+    steps: [
+    "SOL-0.3_uniswap",
+    "BNB-0.01_uniswap",
+    "BNB-1_uniswap"
+  ],
+    gain_percent: 0.25,
+    final_money: 1640
+}`
+
+# Examples
+
+- Given pairs and prices, evaluate each option.
+- Calculate the swap sequence and respective gains or losses.
+- Output the solution as described once the optimal path is found.
+
+# Notes
+
+- Assume constant fluctuation in prices; lean towards fewer swaps to mitigate risk.
+- Ensure that the solution maximizes returns based on current data.
+- Adhere strictly to the use of the provided data format when describing paths and exchanges.
